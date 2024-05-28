@@ -1,0 +1,81 @@
+version: "3.1"
+
+stories:
+  - story: Chào hỏi đưa tên
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: give_name
+      - action: utter_greet_with_name
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: bye
+      - action: utter_bye
+
+  - story: Đưa tên luôn
+    steps:
+      - intent: give_name
+      - action: utter_greet_with_name
+
+  - story: Chào - tên - hỏi chức năng - chào
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: ask_func_list
+      - action: utter_func_list
+      - intent: bye
+      - action: utter_bye
+
+  - story: Chào - hỏi chức năng - chào
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_func_list
+      - action: utter_func_list
+      - intent: bye
+      - action: utter_bye
+
+  - story: Chào - hỏi tên - chào
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: bye
+      - action: utter_bye
+
+  - story: Hỏi tên - hỏi chức năng
+    steps:
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: ask_func_list
+      - action: utter_func_list
+
+  - story: Chào, hỏi địa điẻm và chào
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_place_info
+      - action: action_search_place_info
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: bye
+      - action: utter_bye
+
+  - story: Chào, hỏi recommend_place và chào
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: recommend_place
+      - action: action_recommend_place
+      - intent: ask_name
+      - action: utter_ask_name
+      - intent: bye
+      - action: utter_bye
+
+  - story: Cảm ơn
+    steps:
+      - intent: thank
+      - action: utter_thank

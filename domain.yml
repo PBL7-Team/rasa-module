@@ -1,0 +1,69 @@
+version: "3.1"
+
+intents:
+  - greet
+  - thank
+  - bye
+  - ask_func_list
+  - ask_name
+  - give_name
+  - ask_place_info
+  - recommend_place
+
+entities:
+  - cust_sex
+  - cust_name
+  - place
+  - number
+
+slots:
+  cust_sex:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: cust_sex
+  cust_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: cust_name
+  place:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: place
+  number:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: number
+
+responses:
+  utter_greet:
+    - text: "Kính chào Quý khách! Quý khách vui lòng cho biết tên để tiện xưng hô được không ah?"
+  utter_greet_with_name:
+    - text: "Kính chào {cust_sex} {cust_name}. ABC Shop có thể giúp gì được {cust_sex} {cust_name} ạ?"
+  utter_bye:
+    - text: "Kính chào tạm biệt và mong sớm gặp lại quý khách!"
+    - text: "Kính chào tạm biệt và chúc quý khách một ngày tốt lành!"
+  utter_thank:
+    - text: "Cảm ơn quý khách quá khen ah!"
+    - text: "Dạ không có gì, đó là trách nhiệm của em mà!"
+  utter_func_list:
+    - text: "Em có thể làm được rất nhiều thứ: hát, đọc thơ, đọc chuyện...nhưng giờ em chỉ chat thôi!"
+  utter_ask_name:
+    - text: "Em họ Bank, tên Bot! Người ta hay gọi em là Bank Bot thông minh xinh đẹp giỏi giang nhất vũ trụ ạ! Quý khách cần trợ giúp gì ạ?"
+    - text: "Dạ thưa. Tên Tiếng Việt của em là Trợ lý ảo Ngân hàng nhưng em thích gọi bằng tên Tiếng Anh là Bank Bot cho nó Tây!"
+  utter_unclear:
+    - text: "Thưa quý khách, hiện tại tôi chưa hiểu được yêu cầu của Quý khách."
+
+actions:
+  - action_save_cust_info
+  - action_save_mobile_no
+  - action_reset_slot
+  - action_search_place_info
+  - action_recommend_place

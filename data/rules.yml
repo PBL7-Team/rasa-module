@@ -1,0 +1,27 @@
+version: "3.1"
+
+rules:
+  - rule: Greet and ask name
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Ask for name and respond
+    steps:
+      - intent: give_name
+      - action: utter_greet_with_name
+
+  - rule: Ask for functions and respond
+    steps:
+      - intent: ask_func_list
+      - action: utter_func_list
+
+  - rule: Say thank you
+    steps:
+      - intent: thank
+      - action: utter_thank
+
+  - rule: Say goodbye
+    steps:
+      - intent: bye
+      - action: utter_bye

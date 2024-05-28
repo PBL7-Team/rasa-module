@@ -1,0 +1,196 @@
+version: "3.1"
+
+nlu:
+  - intent: give_name
+    examples: |
+      - [Anh](cust_sex) là [Thắng](cust_name)
+      - [Anh](cust_sex) là [Chiến Thắng](cust_name)
+      - [Anh](cust_sex) tên là [Vương Văn Huy](cust_name)
+      - [Chị](cust_sex) là [Hằng](cust_name)
+      - [Chị](cust_sex) là [Trang](cust_name)
+      - [Em](cust_sex) là [Trang](cust_name)
+      - [Cô](cust_sex) [Vân](cust_name)
+      - [Chú](cust_sex) [Hùng](cust_name)
+      - [Mình](cust_sex) là [Vinh](cust_name)
+      - [Hoàng](cust_name)
+      - [Bách](cust_name)
+      - [Tôi](cust_sex) tên [Đức](cust_name)
+      - [Tôi](cust_sex) là [Linh](cust_name)
+
+
+  - intent: ask_place_info
+    examples: |
+      - Địa điểm [cầu sông Hàn](place)
+      - Bạn có thể cho tôi biết về [cầu Rồng](place) được không?
+      - Hãy giới thiệu cho tôi về [bảo tàng Chăm](place).
+      - Địa điểm [Ngũ Hành Sơn](place) có gì đặc biệt?
+      - Bạn có thể nói cho tôi nghe về [cầu Thị Nại](place) không?
+      - Tôi muốn biết thêm thông tin về [nhà thờ Đức Bà](place).
+      - Bạn có thể kể cho tôi về [chợ Bến Thành](place) không?
+      - [Hồ Hoàn Kiếm](place) có điểm gì thu hút du khách?
+      - Hãy cho tôi biết về [lăng Bác](place).
+      - Bạn có thể giới thiệu về [vịnh Hạ Long](place) cho tôi không?
+      - Tôi muốn tìm hiểu về [phố cổ Hội An](place).
+      - Hãy nói cho tôi biết về [bãi biển Mỹ Khê](place).
+      - Bạn có thể chia sẻ thông tin về [tháp Bà Ponagar](place) không?
+      - Địa điểm [vườn quốc gia Phong Nha-Kẻ Bàng](place) có gì thú vị?
+      - Hãy giới thiệu cho tôi về [khu du lịch Đại Nam](place).
+      - Bạn có thể kể cho tôi về [công viên Suối Tiên](place) không?
+      - Tôi muốn biết thêm về [chùa Một Cột](place).
+      - Cho tôi biết về [Đà Nẵng](place).
+      - Bạn có thể cho tôi thông tin về [đền Hùng](place) được không?
+      - Hãy nói cho tôi nghe về [cầu Cần Thơ](place).
+      - Bạn có thể giới thiệu về [công viên văn hóa Đầm Sen](place) không?
+      - Tôi muốn biết về [làng gốm Bát Tràng](place).
+      - [Chùa Linh Ứng](place)
+
+  - intent: recommend_place
+    examples: |
+      - Hãy cho tôi [3](number) địa điểm đẹp ở Đà Nẵng
+      - Hãy giới thiệu cho tôi vài địa điểm du lịch nổi bật ở Hà Nội
+      - Bạn có thể đề xuất cho tôi địa điểm ăn uống ngon ở TP.HCM không
+      - Tôi muốn biết về một số điểm đến thú vị ở Huế
+      - Gợi ý cho tôi [năm](number) địa điểm tham quan lý tưởng ở Hội An
+      - Bạn có thể giúp tôi tìm kiếm các địa điểm vui chơi giải trí ở Nha Trang?
+      - Liệt kê cho tôi danh sách các địa điểm mua sắm hấp dẫn tại Đà Lạt
+      - Hãy giới thiệu cho tôi một số khu nghỉ dưỡng đẹp ở Phú Quốc
+      - Gợi ý cho tôi [10](number) nhà hàng nổi tiếng ở Vũng Tàu
+      - Bạn có thể giúp tôi tìm kiếm các quán cà phê độc đáo ở Sài Gòn?
+      - Cho tôi xin danh sách các địa điểm du lịch nổi tiếng ở Việt Nam
+      - Hãy giới thiệu cho tôi một số điểm đến hấp dẫn ở các tỉnh miền Bắc
+      - Bạn có thể đề xuất cho tôi [ba](number) các địa điểm tham quan lý tưởng ở khu vực miền Trung?
+      - Liệt kê cho tôi danh sách các khu nghỉ dưỡng đẹp ở miền Nam
+      - Hãy giới thiệu cho tôi một số điểm đến hoang sơ, ít người biết đến
+      - Bạn có thể giúp tôi tìm kiếm các địa điểm phù hợp cho du lịch gia đình?
+      - Liệt kê cho tôi danh sách [chín](number) địa điểm thích hợp cho du lịch phượt
+      - Hãy giới thiệu cho tôi một số điểm đến lý tưởng cho du lịch bụi
+      - Bạn có thể đề xuất cho tôi các địa điểm phù hợp cho du lịch nghỉ dưỡng?
+      - Liệt kê cho tôi danh sách các địa điểm thích hợp cho du lịch sinh thái
+      - Bạn có thể giới thiệu cho tôi địa điểm nào đẹp [nhất](number) ở Đà Nẵng?
+      - Địa điểm nào ở Hà Nội thu hút nhiều du khách [nhất](number)?
+      - Theo bạn, địa điểm nào ở TP.HCM là ngon [nhất](number)
+      - Điểm đến nào ở Huế mang đậm dấu ấn lịch sử?
+      - Theo bạn, địa điểm nào ở Hội An là đẹp [nhất](number)
+      - Bạn có thể giới thiệu cho tôi địa điểm nào ở Nha Trang sôi động [nhất](number)?
+      - Bạn có thể giới thiệu cho tôi [4](number) địa điểm nào ở Phú Quốc?
+      - Theo bạn, [8](number) địa điểm nào ở Vũng Tàu là vui chơi
+      - Bạn có thể giới thiệu cho tôi địa điểm nào ở Sài Gòn là độc đáo [nhất](number)
+      - Recommend cho tôi [5](number) địa điểm đẹp, hợp ví ở VN
+
+  - intent: greet
+    examples: |
+      - start
+      - begin
+      - bắt đầu
+      - lô
+      - xin chào
+      - chào bạn
+      - hello
+      - hi
+      - hey
+      - mình có vài câu hỏi
+      - có ai giúp mình không
+      - bạn ơi
+      - anh ơi
+      - chị ơi
+      - cháu ơi
+      - hello
+      - chào
+      - hi
+      - có ai ở đây không?
+      - alo
+      - hú
+      - yo
+
+  - intent: bye
+    examples: |
+      - tạm biệt
+      - tạm biệt bạn nhé
+      - chào tạm biệt
+      - chào tạm biệt em
+      - tạm biệt em
+      - tạm biệt em nhé
+      - chào tạm biệt và hẹn gặp lại nhé
+
+  - intent: thank
+    examples: |
+      - chuẩn
+      - hay
+      - siêu
+      - tuyệt
+      - cảm ơn
+      - thanks
+      - thank you
+      - ok
+      - cảm ơn em
+      - cảm ơn em nhiều nhé
+      - cảm ơn
+
+  - intent: ask_func_list
+    examples: |
+      - bạn có thể làm được những gì
+      - bạn giúp được gì nào
+      - chức năng của bạn là gì
+      - bạn có thể làm được mấy chức năng
+      - bạn giỏi nhất làm gì
+      - bạn có tư vấn giúp mình được không
+      - việc gì bạn làm được
+      - kể xem bạn làm được gì
+      - cho mình biết bạn làm được gì nhé
+      - bạn hữu dụng như thế nào
+      - bạn có ích trong những việc gì
+      - lĩnh vực gì bạn giỏi nhất
+      - mình tò mò về những việc bạn làm được
+      - chẳng biết bạn làm được gì
+      - bạn tệ nhất trong việc gì
+      - bạn biết được những lĩnh vực gì
+      - bạn giỏi hỗ trợ nhất trong lĩnh vực gì
+      - kể cho mình biết những việc bạn có thể làm được nhé
+      - nói cho mình về những việc bạn giúp được mình
+      - bạn giúp được mình gì nào
+      - bạn có thể làm gì
+      - em giúp được gì
+      - em làm được gì
+      - mày biết làm gì
+      - em biết làm gì
+      - bạn biết làm gì
+      - biết làm gì
+      - làm được gì
+      - có làm được gì
+      - có làm được trò gì
+      - giúp giúp cái gì
+      - biết gì mà nói
+      - làm được gì
+      - giúp được gì
+      - mày làm được gì
+      - có biết gì
+
+  - intent: ask_name
+    examples: |
+      - bạn tên gì
+      - tên gì
+      - chị tên gì
+      - anh tên gì
+      - tên của bạn là gì
+      - tên của chị là gì
+      - tên của anh là gì
+      - cho mình hỏi tên nhé
+      - mình muốn biết tên bạn
+      - mình muốn tiện xưng hộ hơn, cho mình biết tên nhé
+      - để tiện xưng hộ thì tên bạn là gì
+      - cho em xin tên của anh ạ
+      - cho em xin tên của chị ạ
+      - được biết tên bạn thì tốt nhỉ
+      - vui lòng cho mình biết tên nhé
+      - xin phép hỏi tên của bạn
+      - vậy thì tên bạn là gì
+      - tên bạn trong tiếng việt là gì
+      - bạn có vui lòng cho mình biết tên được không
+      - chúng ta nên biết tên nhau nhỉ?
+      - em tên là gì thế
+      - tên em là gì
+      - tên em
+      - tên bạn
+      - bạn tên là gì
+      - bạn tên gì thế
+      - em tên gì
