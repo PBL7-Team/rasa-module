@@ -37,7 +37,6 @@ nlu:
       - Hãy giới thiệu cho tôi về [khu du lịch Đại Nam](place).
       - Bạn có thể kể cho tôi về [công viên Suối Tiên](place) không?
       - Tôi muốn biết thêm về [chùa Một Cột](place).
-      - Cho tôi biết về [Đà Nẵng](place).
       - Bạn có thể cho tôi thông tin về [đền Hùng](place) được không?
       - Hãy nói cho tôi nghe về [cầu Cần Thơ](place).
       - Bạn có thể giới thiệu về [công viên văn hóa Đầm Sen](place) không?
@@ -76,6 +75,23 @@ nlu:
       - Theo bạn, [8](number) địa điểm nào ở Vũng Tàu là vui chơi
       - Bạn có thể giới thiệu cho tôi địa điểm nào ở Sài Gòn là độc đáo [nhất](number)
       - Recommend cho tôi [5](number) địa điểm đẹp, hợp ví ở VN
+      - Gợi ý cho tôi một vài nhà hàng ăn chay ngon ở Đà Nẵng.
+      - Bạn có thể đề xuất một số điểm du lịch văn hóa ở Huế không?
+      - Tôi muốn tìm kiếm các địa điểm tham quan thiên nhiên ở Đà Lạt, bạn có gợi ý nào không?
+      - Gợi ý cho tôi một vài địa điểm thích hợp cho tuần trăng mật ở Nha Trang.
+      - Gợi ý cho tôi [tám](number) địa điểm du lịch xanh ở miền Bắc.
+      - Bạn có thể liệt kê một số địa điểm check-in đẹp ở TP.HCM không?
+      - Gợi ý cho tôi [ba](number) địa điểm ăn uống ngon và rẻ ở Phú Quốc.
+      - Chỗ cắm trại ở Đà Lạt?
+      - Địa điểm du lịch thiên nhiên ở miền Bắc, gợi ý.
+      - Bạn có thể đề xuất [bảy](number) khu du lịch sinh thái ở Việt Nam không?
+      - Chỗ nào ở Ninh Bình đẹp [nhất](number)?
+      - Bạn có thể đề xuất [5](number) điểm du lịch biển ở miền Trung không?
+      - Địa điểm nào ở Cà Mau thích hợp để du lịch cuối tuần?
+      - Địa điểm nào ở Quy Nhơn đáng để ghé thăm?
+      - Bạn có thể giúp tôi tìm kiếm các địa điểm leo núi đẹp ở miền Trung không?
+      - Tôi muốn tìm các địa điểm tham quan miễn phí ở Hà Nội.
+      - Cho tôi địa điểm du lịch hay ho [nhất] tại Việt Nam.
 
   - intent: greet
     examples: |
