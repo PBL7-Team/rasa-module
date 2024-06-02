@@ -19,6 +19,15 @@ def convert_vietnamese_number_to_int(num_str):
 
     return vietnamese_numbers.get(num_str, None)
 
+def generate_recommendation_message(recommendations, num = None):
+    if num:
+        msg = "Dưới đây là danh sách địa điểm phù hợp:\n"
+        msg += "\n".join(recommendations[:num])
+        return msg
+    else:
+        msg = "Dưới đây là danh sách địa điểm phù hợp:\n"
+        msg += "\n".join(recommendations)
+        return msg
 
 def recommend_place(message,num):
     url = "http://flask-app.southeastasia.cloudapp.azure.com:8080/recommend"
@@ -35,19 +44,14 @@ def recommend_place(message,num):
             if num:
                 num = convert_vietnamese_number_to_int(num)
                 if num:
-                    return "\n".join(recommendations[:num])
+                    return generate_recommendation_message(recommendations, num)
                 else:
                     return "Không thể chuyển đổi số"
             else:
-                return "\n".join(recommendations)
+                return generate_recommendation_message(recommendations)
         else:
             return "Không tìm thấy địa điểm phù hợp"
     else:
         print(f"Failed to get recommendations: {response.status_code}")
     
-    # if isinstance(num, str):
-    #     num = convert_vietnamese_number_to_int(num)
-    
-print(recommend_place('Hãy giới thiệu cho tôi địa điểm ăn chơi về đêm ở Đà Nẵng','5'))
-
     
