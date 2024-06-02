@@ -82,8 +82,9 @@ class ActionRecommendPalce(Action):
         return "action_recommend_place"
 
     def run(self, dispatcher, tracker, domain):
+        user_message = tracker.latest_message['text']
         num= next(tracker.get_latest_entity_values("number"), None)
-        msg = recommend_place(num)
+        msg = recommend_place(user_message,num)
         dispatcher.utter_message(msg)
         return []
 

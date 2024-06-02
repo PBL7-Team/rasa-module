@@ -35,9 +35,26 @@ def fix_punctuation(text):
     text = re.sub(r'\s+([.,;!?])', r'\1', text)
     return text
 
+# def search_wikipedia(search_term):
+#     content = fetch_wikipedia_content(search_term)
+#     cut_content = cut_content_before_edit_source(content)
+#     cleaned_content = clean_text(cut_content)
+#     cleaned_content = fix_punctuation(cleaned_content)
+#     return cleaned_content
+
 def search_wikipedia(search_term):
-    content = fetch_wikipedia_content(search_term)
-    cut_content = cut_content_before_edit_source(content)
-    cleaned_content = clean_text(cut_content)
-    cleaned_content = fix_punctuation(cleaned_content)
-    return cleaned_content
+    url = "http://flask-app.southeastasia.cloudapp.azure.com:8080/search"
+    
+    params = {'query': search_term}
+    headers = {'API-Key': 'PBL_7_Traveling'}
+    
+    response = requests.get(url, params=params, headers=headers)
+
+    if response.status_code == 200:
+        data = response.json()
+        print(data)
+    else:
+        print(f"Failed to get recommendations: {response.status_code}")
+
+
+search_wikipedia("hội an")
