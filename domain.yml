@@ -46,7 +46,7 @@ responses:
   utter_greet:
     - text: "Kính chào Quý khách! Quý khách vui lòng cho biết tên để tiện xưng hô được không ạ"
   utter_greet_with_name:
-    - text: "Kính chào {cust_sex} {cust_name}. Bold Voyage Heros có thể giúp gì được {cust_sex} {cust_name} ạ?"
+    - text: "Chào bạn {cust_name}. Bold Voyage Heros có thể giúp gì được ạ?"
   utter_bye:
     - text: "Kính chào tạm biệt và mong sớm gặp lại quý khách!"
     - text: "Kính chào tạm biệt và chúc quý khách một ngày tốt lành!"

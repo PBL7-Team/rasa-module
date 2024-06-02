@@ -27,7 +27,7 @@ class ActionSaveCustInfo(Action):
         bot_position = "mình"
 
         if cust_sex is None:
-            cust_sex = "bạn"
+            bot_position = "bạn"
 
         if cust_sex in ["anh", "chị"]:
             bot_position = "em"
