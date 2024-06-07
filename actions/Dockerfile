@@ -1,11 +1,10 @@
-FROM rasa/rasa-sdk:3.6.2
-
-USER root
+# actions/Dockerfile
+FROM rasa/rasa-sdk:latest
 
 WORKDIR /app
 
 COPY . /app
 
-RUN pip install --no-cache-dir -r requirements.txt  
+RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["rasa", "run", "actions"]
+CMD ["start", "--actions", "actions"]
