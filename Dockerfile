@@ -10,7 +10,7 @@ COPY ./domain.yml /app/domain.yml
 COPY ./credentials.yml /app/credentials.yml
 COPY ./endpoints.yml /app/endpoints.yml
 
-# Copy models if they exist
+# Copy models if the directory exists
 COPY ./models /app/models
 
 # Train the model if no tar.gz file is present in the models directory
