@@ -13,9 +13,9 @@ COPY ./endpoints.yml /app/endpoints.yml
 # Create the models directory
 RUN mkdir -p /app/models
 
-# Train the model if no tar.gz file is present in the models directory
-RUN if ! ls /app/models/*.tar.gz 1> /dev/null 2>&1; then \
-      rasa train; \
-    fi
 
-CMD ["run", "--enable-api", "--cors", "*", "--debug"]
+# Copy the entrypoint script
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
+ENTRYPOINT ["/app/entrypoint.sh"]
