@@ -4,7 +4,7 @@ FROM rasa/rasa:latest-full
 WORKDIR /app
 
 # Copy all necessary files
-COPY ./config /app/config
+COPY ./config.yml /app/config.yml
 COPY ./data /app/data
 COPY ./domain.yml /app/domain.yml
 COPY ./credentials.yml /app/credentials.yml
