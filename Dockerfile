@@ -1,6 +1,6 @@
 # Dockerfile
 FROM rasa/rasa:latest-full
-
+USER root
 WORKDIR /app
 
 # Copy all necessary files

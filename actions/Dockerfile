@@ -1,6 +1,6 @@
 # actions/Dockerfile
 FROM rasa/rasa-sdk:latest
-
+USER root
 WORKDIR /app
 
 COPY . /app
