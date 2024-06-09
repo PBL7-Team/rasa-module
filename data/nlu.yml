@@ -91,7 +91,8 @@ nlu:
       - Địa điểm nào ở Quy Nhơn đáng để ghé thăm?
       - Bạn có thể giúp tôi tìm kiếm các địa điểm leo núi đẹp ở miền Trung không?
       - Tôi muốn tìm các địa điểm tham quan miễn phí ở Hà Nội.
-      - Cho tôi địa điểm du lịch hay ho [nhất] tại Việt Nam.
+      - Cho tôi địa điểm du lịch hay ho [nhất](number) tại Việt Nam.
+      - Chả biết nữa, nói thử [vài](number) địa điểm gì đó xem nào.
 
   - intent: greet
     examples: |
@@ -127,6 +128,8 @@ nlu:
       - tạm biệt em
       - tạm biệt em nhé
       - chào tạm biệt và hẹn gặp lại nhé
+      - thôi, hết thứ hỏi rồi, bye
+      - cũng đủ rồi đấy
 
   - intent: thank
     examples: |

@@ -44,22 +44,35 @@ slots:
 
 responses:
   utter_greet:
-    - text: "Kính chào Quý khách! Quý khách vui lòng cho biết tên để tiện xưng hô được không ah?"
+    - text: "Kính chào Quý khách! Quý khách vui lòng cho biết tên để tiện xưng hô được không ạ?"
+    - text: "Xin chào! Mình có thể gọi bạn là gì nhỉ?"
+    - text: "Chào bạn! Cho mình biết tên để tiện xưng hô nhé?"
   utter_greet_with_name:
-    - text: "Kính chào {cust_sex} {cust_name}. ABC Shop có thể giúp gì được {cust_sex} {cust_name} ạ?"
+    - text: "Chào bạn {cust_name}. Bold Voyage Heros có thể giúp gì được ạ?"
+    - text: "Xin chào {cust_name}! Mình có thể hỗ trợ bạn như thế nào?"
+    - text: "Rất vui được gặp bạn, {cust_name}. Bạn cần mình giúp gì không?"
   utter_bye:
     - text: "Kính chào tạm biệt và mong sớm gặp lại quý khách!"
     - text: "Kính chào tạm biệt và chúc quý khách một ngày tốt lành!"
+    - text: "Tạm biệt! Chúc quý khách một ngày vui vẻ và hẹn gặp lại!"
+    - text: "Chào tạm biệt! Rất mong được gặp lại quý khách lần sau!"
   utter_thank:
-    - text: "Cảm ơn quý khách quá khen ah!"
-    - text: "Dạ không có gì, đó là trách nhiệm của em mà!"
+    - text: "Cảm ơn quý khách quá khen ạ."
+    - text: "Dạ không có gì, đó là trách nhiệm của mình mà!"
+    - text: "Rất cảm ơn quý khách! Chúng tôi luôn sẵn lòng giúp đỡ."
+    - text: "Cảm ơn! Rất vui được phục vụ quý khách."
   utter_func_list:
-    - text: "Em có thể làm được rất nhiều thứ: hát, đọc thơ, đọc chuyện...nhưng giờ em chỉ chat thôi!"
+    - text: "Mình có thể hỗ trợ bạn tìm kiếm những địa điểm du lịch dựa trên yêu cầu của bạn nhé."
+    - text: "Chúng tôi cung cấp thông tin về các điểm du lịch, đặt phòng và nhiều dịch vụ khác."
+    - text: "Bold Voyage Heros có thể giúp bạn lên kế hoạch chuyến đi hoàn hảo."
   utter_ask_name:
-    - text: "Em họ Bank, tên Bot! Người ta hay gọi em là Bank Bot thông minh xinh đẹp giỏi giang nhất vũ trụ ạ! Quý khách cần trợ giúp gì ạ?"
-    - text: "Dạ thưa. Tên Tiếng Việt của em là Trợ lý ảo Ngân hàng nhưng em thích gọi bằng tên Tiếng Anh là Bank Bot cho nó Tây!"
+    - text: "Mình là chatbot Bold Voyage Heros. Quý khách cần trợ giúp gì ạ?"
+    - text: "Bold Voyage Heros xin chào! Mình có thể hỗ trợ bạn như thế nào?"
+    - text: "Chào bạn! Mình là Bold Voyage Heros, bạn cần giúp gì không?"
   utter_unclear:
     - text: "Thưa quý khách, hiện tại tôi chưa hiểu được yêu cầu của Quý khách."
+    - text: "Xin lỗi, mình chưa nắm rõ yêu cầu của bạn. Bạn có thể nói rõ hơn không?"
+    - text: "Mình chưa hiểu rõ yêu cầu của bạn. Bạn có thể diễn đạt lại không?"
 
 actions:
   - action_save_cust_info
